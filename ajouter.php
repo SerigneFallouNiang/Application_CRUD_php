@@ -48,7 +48,7 @@
             <label>Titre</label>
             <input type="text" name="titre">
             <label>Description</label>
-            <input type="text" name="description">
+            <textarea type="text" name="description">
             <label>statut</label>
             <input type="text" name="statut">
             <input type="submit" value="Ajouter" name="button">

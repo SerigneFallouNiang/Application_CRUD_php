@@ -1,7 +1,7 @@
 <?php
-//connexion à la base de données
-$con=mysqli_connect("localhost","root","","entreprise");
-if(!$con){
-    echo "Vous n'etes pas connecté à,la base de donnée";
-}
+  //connexion à la base de données
+  $con = mysqli_connect("localhost","root","","crud");
+  if(!$con){
+     echo "Vous n'êtes pas connecté à la base de donnée";
+  }
 ?>
