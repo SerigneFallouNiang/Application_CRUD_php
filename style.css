@@ -53,6 +53,7 @@ img{
 tr:nth-child(2n){
     background-color: #f6f8f6;
 }
+
 tr:nth-child(2n) td {
     border-bottom: 1px solid #e0e0e0;
     border-top:  1px solid #e0e0e0;
