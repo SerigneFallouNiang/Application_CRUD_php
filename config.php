@@ -15,4 +15,33 @@ try {
 } catch (PDOException $e) {
     die("Erreur de connexion : " . $e->getMessage());
 }
+
+// Vérification de la soumission du formulaire
+if (isset($_POST["submit"])) {
+    // Récupération des données du formulaire
+    $nom = $_POST['nom'];
+    $prenom = $_POST['prenom'];
+    $email = $_POST['email'];
+    $messages = $_POST['messages'];
+
+    // Préparation de la requête SQL avec des paramètres nommés
+    $sql = "INSERT INTO utilisateur(nom, prenom, email, messages) VALUES(:nom, :prenom, :email, :messages)";
+    $stmt = $connexion->prepare($sql);
+
+    // Liaison des paramètres
+    $stmt->bindParam(":prenom", $prenom);
+    $stmt->bindParam(":nom", $nom);
+    $stmt->bindParam(":email", $email);
+    $stmt->bindParam(":messages", $messages);
+
+    // Exécution de la requête
+    $stmt->execute();
+
+    echo "OK"; // Affichage si l'insertion s'est bien déroulée
+} else {
+    echo "Erreur"; // Affichage en cas d'absence de soumission du formulaire
+}
+
 ?>
+
+
