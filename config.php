@@ -4,7 +4,7 @@
 $serveur = "localhost";
 $utilisateur = "root";
 $mot_de_passe = "";
-$base_de_donnees = "fromDonnees";
+$base_de_donnees = "crud";
 
 try {
     // Création d'une connexion
