@@ -8,8 +8,8 @@
 </head>
 <body>
     <div class="form">
-        <a href="index.html" class="back_btn"><img src="images/back.png" alt="">Retour</a>
-        <h2>Ajouter une idee</h2>
+        <a href="index.php" class="back_btn"><img src="images/back.png" alt="">Retour</a>
+        <h2>Modifier l'idee</h2>
         <p class="erreur_message">
             Veuillez remplir tous les champs !
         </p>
@@ -20,7 +20,7 @@
             <input type="text" name="prenom">
             <label for="">Age</label>
             <input type="nomber" name="age">
-            <input type="submit" value="Ajouter" name="button">
+            <input type="submit" value="Modifier*" name="button">
 
         </form>
     
