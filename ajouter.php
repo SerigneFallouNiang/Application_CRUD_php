@@ -8,42 +8,34 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<?php
-        // Vérifier que le bouton ajouter a bien été cliqué
-        if(isset($_POST['boutton'])) {
-            // Extraction des informations envoyées dans des variables par la méthode POST
-            extract($_POST);
-            // Vérifier que tous les champs ont été remplis
-            if(!empty($titre) && !empty($description) && !empty($statut) ) {
+    <?php
+       // Vérifier que le bouton ajouter a bien été cliqué
+       if(isset($_POST['button'])){
+           // Vérifier que tous les champs ont été remplis
+           if(!empty($_POST['titre']) && !empty($_POST['description']) && !empty($_POST['statut'])){
                 // Connexion à la base de données
                 include_once "connexion.php";
-                // Vérifier la connexion à la base de données
-                if($con) {
-                    // Requête d'ajout avec une requête préparée
-                    $stmt = $con->prepare("INSERT INTO idee ('titre', 'description', 'statut') VALUES (?, ?, ?)");
-                    // Sécurisation du mot de passe en le hachant (ici en utilisant la fonction password_hash)
-                  
-                    // Liaison des paramètres
-                    $stmt->bind_param($titre, $description, $statut);
-                    // Exécution de la requête
-                    if($stmt->execute()) {
-                        // Redirection si l'inscription a réussi
-                        header("location: index.php");
-                        exit(); // Terminer le script après la redirection
-                    } else {
-                        $message = "Erreur lors de l'ajout de l'utilisateur.";
-                    }
+                // Requête d'ajout avec requête préparée
+                $stmt = $con->prepare("INSERT INTO idee (titre, description, statut) VALUES (?, ?, ?)");
+                // Liaison des paramètres
+                $stmt->bind_param("sss", $_POST['titre'], $_POST['description'], $_POST['statut']);
+                // Exécution de la requête
+                if($stmt->execute()){
+                    // Redirection si l'ajout a réussi
+                    header("location: index.php");
+                    exit(); // Terminer le script après la redirection
                 } else {
-                    $message = "Erreur de connexion à la base de données.";
+                    $message = "Idee non ajoutee";
                 }
-            } else {
-                $message = "Veuillez remplir tous les champs !";
-            }
-        }
+           } else {
+               $message = "Veuillez remplir tous les champs !";
+           }
+       }
+    
     ?>
     <div class="form">
         <a href="index.php" class="back_btn"><img src="images/back.png"> Retour</a>
-        <h2>Ajouter des idées</h2>
+        <h2>Ajouter une idee</h2>
         <p class="erreur_message">
             <?php 
             // si la variable message existe , affichons son contenu
@@ -51,13 +43,12 @@
                 echo $message;
             }
             ?>
-
         </p>
         <form action="" method="POST">
             <label>Titre</label>
             <input type="text" name="titre">
             <label>Description</label>
-            <input type="text" name="description">
+            <textarea name="description" id="" cols="30" rows="10"></textarea>
             <label>Statut</label>
             <input type="text" name="statut">
             <input type="submit" value="Ajouter" name="button">
