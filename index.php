@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Application CRUD</title>
     <style>
+
+        .headers {
+            width: 100%;
+    height: 100vh; /* Utilisation de la hauteur de l'écran */
+    background-image: url(images/Simplon-KIDS.jpg);
+    background-size: 100%;
+    background-position: center; /* Centrage de l'image */
+    background-repeat: no-repeat; /* Empêcher la répétition de l'image */
+        }
        .container1 img {
     height: 25px;
    width: 20px;
@@ -46,7 +55,9 @@
         }
     
 .logo{float: left;
-padding-left: 20%;}
+padding-left: 20%;
+margin-top: -15px;
+}
         .headers {
             margin-top: -50px;
             display:flex;
@@ -105,9 +116,10 @@ nav {
         .menu-icon {
             display: none; /* Cacher par défaut sur les écrans larges */
         }
-        .logo {
+        .logo img{
             display: inline-block;
             margin-right: 20px;
+            width: 100px;
         }
         
        
@@ -118,7 +130,7 @@ nav {
 </head>
 <body>
     <nav> 
-        <div class="logo"><img src="logo.png" alt="Logo"></div>
+        <div class="logo"><img src="images/logo-simplonSenegal-1-e1647016201426.png" alt="Logo"></div>
         <span class="menu-icon">&#9776;</span>
 
         <a href="index.php">Acceuil</a>
@@ -144,7 +156,7 @@ Que vous soyez novice dans la manipulation de données ou un utilisateur expéri
 </div>
             
     <div class="container" id="realisations">
-        <h2>Voici la liste des idees  :</h2>
+        <h2>Voici la liste des idees:</h2>
         </div>
 
         <?php 
