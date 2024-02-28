@@ -6,10 +6,14 @@
     <title>Application CRUD</title>
     <style>
 
+
+.acceuil{
+    color: #E35F0F;
+}
         .headers {
             width: 100%;
     height: 100vh; /* Utilisation de la hauteur de l'écran */
-    background-image: url(images/Simplon-KIDS.jpg);
+    background-image: url(images/Rectangle\ 1.png);
     background-size: 100%;
     background-position: center; /* Centrage de l'image */
     background-repeat: no-repeat; /* Empêcher la répétition de l'image */
@@ -59,7 +63,7 @@ padding-left: 20%;
 margin-top: -15px;
 }
         .headers {
-            margin-top: -50px;
+            
             display:flex;
             justify-content:space-between;
             align-items:center;
@@ -81,12 +85,20 @@ margin-top: -15px;
     z-index: -1; /* Placez le pseudo-élément derrière le contenu principal */
 }
 
-        h1 {
-            width: 400px;
+h1 {
+            width: 80%;
             text-align: left;
             font: size 30px;;
             background-position: center;
             color:  #E35F0F; /* Couleur du texte */
+            padding: 20px; /* Ajout de marge intérieure pour le titre */
+        }
+     .headers   h1 {
+            width: 80%;
+            text-align: left;
+            font: size 30px;;
+            background-position: center;
+            color:  #fff; /* Couleur du texte */
             padding: 20px; /* Ajout de marge intérieure pour le titre */
         }
         p { font-size:18px;
@@ -141,7 +153,7 @@ nav {
     </nav>
     <div class="container" id="presentation">
     <div class="headers">
-        <h1>Développement d'une Application de Boîte à Idées Collaborative</h1>
+        <h1><span class = "acceuil">Bienvenue dans notre plateforme ! </span><br>Notre application CRUD a été spécialement conçue pour simplifier la gestion de vos données en vous offrant une interface conviviale pour créer, lire, mettre à jour et supprimer des éléments en toute simplicité. Que vous soyez novice dans la manipulation de données ou un utilisateur expérimenté, nous sommes là pour vous guider à travers chaque étape du processus. Explorez nos fonctionnalités intuitives et découvrez comment notre application peut vous aider à gérer efficacement vos informations.</h1>
     </div>
         <div class="container1">
             <p><span class="color-orange">
@@ -166,7 +178,7 @@ Que vous soyez novice dans la manipulation de données ou un utilisateur expéri
                 $req = mysqli_query($con , "SELECT * FROM idee");
                 if(mysqli_num_rows($req) == 0){
                     //s'il n'existe pas d'idee dans la base de donné , alors on affiche ce message :
-                    echo "Il n'y a pas encore d'employé ajouter !" ;
+                    echo "Il n'y a pas encore d'idee ajouter !" ;
                     
                 }else {
                     //si non , affichons la liste de tous les idee
