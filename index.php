@@ -11,7 +11,7 @@
     color: #E35F0F;
 }
         .headers {
-            width: 100%;
+            
     height: 100vh; /* Utilisation de la hauteur de l'écran */
     background-image: url(images/Rectangle\ 1.png);
     background-size: 100%;
