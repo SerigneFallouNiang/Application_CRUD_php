@@ -144,7 +144,7 @@ Que vous soyez novice dans la manipulation de données ou un utilisateur expéri
 </div>
             
     <div class="container" id="realisations">
-        <h2>Réalisations de l'Application:</h2>
+        <h2>Voici la liste des idees  :</h2>
         </div>
 
         <?php 
