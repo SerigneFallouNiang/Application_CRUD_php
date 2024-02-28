@@ -40,7 +40,7 @@
             font-size: 30px;
         }
         .container1{
-            background-color: #27348B;
+            background-color: #0AE2C5;
             gap: 100px;
             display: block;
             align-items: center;
@@ -120,7 +120,7 @@ nav {
 }
 
         nav a {
-            color: #fff;
+            color: #0AE2C5;
             text-decoration: none;
             margin: 0 10px;
 
@@ -190,7 +190,8 @@ Que vous soyez novice dans la manipulation de données ou un utilisateur expéri
             <h1><?=$row['titre']?></h1>    
             <p><?=$row['description']?></p>
             <h2><?=$row['statut']?></h2>   
-            <a href="supprimer.php?id=<?=$row['id']?>"><img src="images/trash.png"></a>         
+            <a href="supprimer.php?id=<?=$row['id']?>"><img src="images/trash.png"></a>
+            <a href="modifier.php?id=<?=$row['id']?>"><img src="images/pen.png"></a>         
             </div>
             <h2>.</h2>
             
