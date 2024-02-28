@@ -20,7 +20,7 @@ Le design de l'application est laissé à la créativité des développeurs, ave
 
 ## Installation et Utilisation
 1. Cloner le projet depuis ce dépôt GitHub.
-2. Configurer les informations de connexion à la base de données dans le fichier `db_connection.php` situé dans le dossier `/includes`.
+2. Configurer les informations de connexion à la base de données dans le fichier `connexion.php` .
 3. Importer la structure de la base de données en utilisant le fichier SQL fourni.
 4. Ouvrir l'application dans un navigateur web.
 
