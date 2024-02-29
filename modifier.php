@@ -14,7 +14,7 @@
                 // Exécution de la requête
                 if($stmt->execute()){
                     // Redirection après la modification
-                    header("location: index.php");
+                    header("location: acceuil.php");
                     exit(); // Terminer le script après la redirection
                 } else {
                     $message = "Erreur lors de la modification de l'idée";
