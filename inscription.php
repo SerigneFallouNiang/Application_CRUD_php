@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,7 +22,7 @@
                 // Exécution de la requête
                 if($stmt->execute()){
                     // Redirection si l'ajout a réussi
-                    header("location: index.php");
+                    header("location: acceuil.php");
                     exit(); // Terminer le script après la redirection
                 } else {
                     $message = "Erreur lors de l'inscription. Veuillez réessayer.";
