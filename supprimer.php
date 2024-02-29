@@ -6,5 +6,5 @@
   //requête de suppression
   $req = mysqli_query($con , "DELETE FROM idee WHERE id = $id");
   //redirection vers la page index.php
-  header("Location:index.php")
+  header("Location:acceuil.php")
 ?>
