@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inscription</title>
+    <title>Connexion :</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -25,7 +25,7 @@
                 if($row){//si la requête a été effectuée avec succès , on fait une redirection
                     header("location: index.php");
                 }else {//si non
-                    $message = "Employé non trouvé";
+                    $message = "utilisateur  non trouvé";
                 }
               
            } else {
