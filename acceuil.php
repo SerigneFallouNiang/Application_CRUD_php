@@ -149,7 +149,7 @@ nav {
         <a href="liste.php">liste des utilisateurs</a>
         <a href="ajouter.php">ajout d'idee</a>
         <a href="modifier.php">Modification d'idee</a>
-        <a href="inscription.php">Deconnexion</a>
+        <a href="index.php">Deconnexion</a>
     </nav>
     <div class="container" id="presentation">
     <div class="headers">
@@ -187,9 +187,9 @@ Que vous soyez novice dans la manipulation de données ou un utilisateur expéri
                         
 
             <div class="container1">
-            <h1><?=$row['titre']?></h1>    
-            <p><?=$row['description']?></p>
-            <h2><?=$row['statut']?></h2>   
+            <h1>Titre :<?=$row['titre']?></h1>    
+            <p>Description :<?=$row['description']?></p>
+            <h2>Statut :<?=$row['statut']?></h2>   
             <a href="supprimer.php?id=<?=$row['id']?>"><img src="images/trash.png"></a>
             <a href="modifier.php?id=<?=$row['id']?>"><img src="images/pen.png"></a>         
             </div>
