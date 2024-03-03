@@ -145,10 +145,9 @@ nav {
         <div class="logo"><img src="images/logo-simplonSenegal-1-e1647016201426.png" alt="Logo"></div>
         <span class="menu-icon">&#9776;</span>
 
-        <a href="index.php">Acceuil</a>
+        <a href="acceuil.php">Acceuil</a>
         <a href="liste.php">liste des utilisateurs</a>
         <a href="ajouter.php">ajout d'idee</a>
-        <a href="modifier.php">Modification d'idee</a>
         <a href="index.php">Deconnexion</a>
     </nav>
     <div class="container" id="presentation">
