@@ -1,4 +1,23 @@
-<?php
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>liste utilisateur</title>
+</head>
+<style>
+    ul{
+        background-color: aqua;
+    }
+    body{
+        background-color: aqua;   
+
+    }
+</style>
+<body>
+    
+</body>
+</html><?php
 // Inclusion du fichier de connexion à la base de données
 include_once "connexion.php";
 
